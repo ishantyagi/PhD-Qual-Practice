@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flash Cards: Home</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sticky-footer.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="script/main.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">PhD Flash Cards</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Quizes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/register') }}">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <article class="jumbotron mx-auto">
+            <div class="questionItem visible" data-answer="2">
+                <div class="row">
+                    <h3>Q1. This will be a test question1</h3>
+                </div>
+                <div class="row">
+                    <div class="choices">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optradio">Option 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optradio">Option 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optradio">Option 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optradio">Option 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optradio">Option 1
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 mx-auto">
+                        <!--<button type="button" class="btn">Previous</button>-->
+                        <button type="button" class="btn btn-primary" onclick="showAnswer()">Show Answer</button>
+                        <!--<button type="button" class="btn">Next</button>-->
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="previous">
+                        <button type="button" onclick="getPrevious()" class="btn previous">
+                            Previous
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 ml-auto">
+                    <div class="next">
+                        <button type="button" onclick="getNext()" class="btn next">
+                           Next
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+        <div class="row">
+            <div class="col-xs-12 mx-auto">
+                <input type="submit" class="btn btn-info" value="Submit">
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="footer bg-dark">
+        <div class="container">
+            <span class="text-muted"> Created by Team RubyGeeks</span>
+        </div>
+    </footer>
+</body>
+
+</html>
