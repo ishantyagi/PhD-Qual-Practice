@@ -27,7 +27,8 @@ Given the following questions exist:
 Scenario: Show next/previous flash card
 Given I am on the flash card page
 #And I should see “Randomized flash cards”
-When I press next
-Then I should see next flash card in the deck
-When I press previous
-Then I should see next flash card in the deck
+Then I should see "Question1"
+When I press "Next"
+Then I should see "Question2"
+And I press "Previous"
+Then I should see "Question1"
