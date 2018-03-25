@@ -1,6 +1,10 @@
 {
   "Cucumber Features": {
     "coverage": {
+      "/home/ankit/Music/PhD-Qual-Practice/app/models/question_bank.rb": [
+        1,
+        null
+      ],
       "/home/ankit/Music/PhD-Qual-Practice/app/controllers/admin_controller.rb": [
         1,
         null,
@@ -44,12 +48,8 @@
       "/home/ankit/Music/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
         1,
         null
-      ],
-      "/home/ankit/Music/PhD-Qual-Practice/app/models/question_bank.rb": [
-        1,
-        null
       ]
     },
-    "timestamp": 1522017344
+    "timestamp": 1522019883
   }
 }

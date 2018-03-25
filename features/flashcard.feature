@@ -5,12 +5,12 @@ I want to see next or previous flash cards
 
 Background: questions in database
 
-  Given the following questions exist:
-  | Quename    | op1 | op2 | op3 | op4 | op5 | ans | cat |
-  | Question1  | AA  | BB  | CC  | DD  | EE  | BB  |  1  |
-  | Question2  | AA  | BB  | CC  | DD  | EE  | DD  |  2  |
-  | Question3  | AA  | BB  | CC  | DD  | EE  | CC  |  3  |
-  | Question4  | AA  | BB  | CC  | DD  | EE  | EE  |  1  |
+Given the following questions exist:
+  | question   | option1 | option2 | option3 | option4 | option5 | answer | category |
+  | Question1  |   AA    |   BB    |    CC   |   DD    |   EE    |   BB   |     1    |
+  | Question2  |   AA    |   BB    |    CC   |   DD    |   EE    |   DD   |     2    |
+  | Question3  |   AA    |   BB    |    CC   |   DD    |   EE    |   CC   |     3    |
+  | Question4  |   AA    |   BB    |    CC   |   DD    |   EE    |   EE   |     1    |
 
 
 #Background:
