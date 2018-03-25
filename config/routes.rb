@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-
+  resources :admin
   root 'admin#index'
-  resources :question_banks
 
   # get 'admin/index'
 

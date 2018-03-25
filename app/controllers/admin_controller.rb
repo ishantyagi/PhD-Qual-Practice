@@ -16,7 +16,7 @@ class AdminController < ApplicationController
   def create
     @question = QuestionBank.create!(question_params)
     flash[:notice] = "Question was successfully added."
-    redirect_to admin_path
+    # redirect_to admin_path
   end
 
   def delete
