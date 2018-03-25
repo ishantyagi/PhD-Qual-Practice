@@ -1,55 +1,55 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ankit/Music/PhD-Qual-Practice/app/models/question_bank.rb": [
+      "/home/ankit/Music/PhD-Qual-Practice/app/controllers/admin_controller.rb": [
+        1,
+        null,
+        1,
         0,
-        0
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
       ],
       "/home/ankit/Music/PhD-Qual-Practice/app/controllers/application_controller.rb": [
-        0,
+        1,
         null,
         null,
-        0,
-        0
-      ],
-      "/home/ankit/Music/PhD-Qual-Practice/app/controllers/admin_controller.rb": [
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0
+        1,
+        null
       ],
       "/home/ankit/Music/PhD-Qual-Practice/app/helpers/application_helper.rb": [
-        0,
-        0
+        1,
+        null
       ],
       "/home/ankit/Music/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
-        0,
-        0
+        1,
+        null
+      ],
+      "/home/ankit/Music/PhD-Qual-Practice/app/models/question_bank.rb": [
+        1,
+        null
       ]
     },
-    "timestamp": 1522006895
+    "timestamp": 1522017344
   }
 }
