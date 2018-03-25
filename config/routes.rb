@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
   root 'admin#index'
+  resources :question_banks
 
   # get 'admin/index'
 
