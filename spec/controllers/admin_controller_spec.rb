@@ -13,10 +13,15 @@ describe AdminController do
   end
   
   describe "#index" do
-    #let!(:question1) {FactoryBot.create(:questionbank, question: 'Test Question1',category: 'RSpec Test1',option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
-    #let!(:question2) {FactoryBot.create(:questionbank, question: 'Test Question2',category: 'RSpec Test2',option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '3')}
-    it "get all questions" do
+    it "gets all questions" do
       get :index
+      expect(response).to have_http_status(:success)
+    end
+  end
+  
+  describe "#show" do
+    it "tests show method" do
+      get :show
       expect(response).to have_http_status(:success)
     end
   end
