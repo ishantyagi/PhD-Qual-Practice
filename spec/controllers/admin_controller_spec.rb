@@ -18,12 +18,5 @@ describe AdminController do
       expect(response).to have_http_status(:success)
     end
   end
-  
-  describe "#show" do
-    it "tests show method" do
-      get :show
-      expect(response).to have_http_status(:success)
-    end
-  end
 end
 
