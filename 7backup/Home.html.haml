@@ -1,0 +1,76 @@
+
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title Flash Cards: Home
+    / Latest compiled and minified CSS
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/sticky-footer.css", :rel => "stylesheet"}/
+    / jQuery library
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
+    / Popper JS
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"}
+    / Latest compiled JavaScript
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"}
+  %body
+    %nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+      %a.navbar-brand{:href => "#"} PhD Flash Cards
+      %button.navbar-toggler{"data-target" => ".dual-collapse2", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      .collapse.navbar-collapse.w-100.order-1.order-md-0.dual-collapse2
+        %ul.navbar-nav.mr-auto
+          %li.nav-item.active
+            %a.nav-link{:href => "#"}
+              Home
+              %span.sr-only (current)
+          %li.nav-item
+            %a.nav-link{:href => "#"} Quizes
+          %li.nav-item
+            %a.nav-link{:href => "#"} About
+      .navbar-collapse.collapse.w-100.order-3.dual-collapse2
+        %ul.navbar-nav.ml-auto
+          %li.nav-item
+            %a.nav-link{:href => ""} Login
+          %li.nav-item
+            %a.nav-link{:href => ""} Register
+    %br/
+    .container
+      %article.jumbotron.mx-auto
+        .questionItem
+          .row
+            %h3 Q1. This will be a test question1
+          .row
+            .choices
+              .radio
+                %label
+                  %input{:name => "optradio", :type => "radio"}>/
+                  Option 1
+              .radio
+                %label
+                  %input{:name => "optradio", :type => "radio"}>/
+                  Option 1
+              .radio
+                %label
+                  %input{:name => "optradio", :type => "radio"}>/
+                  Option 1
+              .radio
+                %label
+                  %input{:name => "optradio", :type => "radio"}>/
+                  Option 1
+              .radio
+                %label
+                  %input{:name => "optradio", :type => "radio"}>/
+                  Option 1
+          .row
+            .col-xs-12.mx-auto
+              %button.btn{:type => "button"} Previous
+              %button.btn.btn-primary{:type => "button"} Show Answer
+              %button.btn{:type => "button"} Next
+      .row
+        .col-xs-12.mx-auto
+          %input.btn.btn-info{:type => "submit", :value => "Submit"}/
+    %br/
+    %footer.footer.bg-dark
+      .container
+        %span.text-muted Created by Team RubyGeeks
