@@ -1,11 +1,11 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ankit/Music/PhD-Qual-Practice/app/models/question_bank.rb": [
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/models/question_bank.rb": [
         1,
         null
       ],
-      "/home/ankit/Music/PhD-Qual-Practice/app/controllers/admin_controller.rb": [
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/admin_controller.rb": [
         1,
         null,
         1,
@@ -34,22 +34,75 @@
         null,
         null
       ],
-      "/home/ankit/Music/PhD-Qual-Practice/app/controllers/application_controller.rb": [
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/home/ankit/Music/PhD-Qual-Practice/app/helpers/application_helper.rb": [
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ankit/Music/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1522021871
+    "timestamp": 1522086288
+  },
+  "RSpec": {
+    "coverage": {
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/admin_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/PhD-Qual-Practice/app/models/question_bank.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1522086300
   }
 }
