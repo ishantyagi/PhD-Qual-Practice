@@ -4,22 +4,28 @@ var lastIndex = 0;
 // this will called when document is ready
 
 $(function () {
+    //positionFooter();
     initializeIndex();
 });
 
 function initializeIndex() {
-    currentIndex = $(".questionItem.visible").index();
+    currentIndex = $(".questionItem:not(.hide)").index();
     lastIndex = $(".questionItem").length - 1;
     if (currentIndex == lastIndex) {
         //disable next
         $(".next").prop("disabled", true);
     }
+    else{
+        $(".next").prop("disabled", false); 
+    }
     if (currentIndex == 0)
         $(".previous").prop("disabled", true);
+        else
+     $(".previous").prop("disabled", false);
 }
 
 function showAnswer() {
-    var elem = $(".questionItem.visible");
+    var elem = $(".questionItem:not(.hide)");
     var correctAnswer = elem.attr("data-answer");
     //highlight right answer
     elem.find(".choices").children().eq(correctAnswer - 1).addClass("correct");
@@ -32,21 +38,38 @@ function getNext() {
     $(".correct").removeClass("correct");
     if (currentIndex < lastIndex) {
         //hide the current element
-        $(".questionItem").eq(currentIndex).removeClass("visible");
+        $(".questionItem").eq(currentIndex).removeClass("show");
         $(".questionItem").eq(currentIndex).addClass("hide");
         //increament current index
         currentIndex++;
         //show the next element with new current index
-        $(".questionItem").eq(currentIndex).addClass("visible");
+        $(".questionItem").eq(currentIndex).addClass("show");
         $(".questionItem").eq(currentIndex).removeClass("hide");
-        if (currentIndex == lastIndex) {
-            //disable next
-            $(".next").prop("disabled", true);
-        }
-        if (currentIndex > 0) {
-            $(".previous").prop("disabled", false);
-        }
+        initializeIndex();
     }
+}
+
+function positionFooter() {
+    var footerHeight = 0,
+        footerTop = 0,
+        $footer = $(".footer");
+    footerHeight = $footer.height();
+    footerTop = ($(window).scrollTop() + $(window).height() - footerHeight) + "px";
+
+    if (($(document.body).height() + footerHeight) < $(window).height()) {
+        $footer.css({
+            position: "absolute",
+            top: footerTop
+        });
+    } else {
+        $footer.css({
+            position: "static"
+        })
+    }
+    $footer.removeClass("hide");
+    $(window)
+        .scroll(this.positionFooter)
+        .resize(this.positionFooter)
 }
 
 function getPrevious() {
@@ -54,19 +77,13 @@ function getPrevious() {
     $(".correct").removeClass("correct");
     if (currentIndex > 0) {
         //hide the current element
-        $(".questionItem").eq(currentIndex).removeClass("visible");
+        $(".questionItem").eq(currentIndex).removeClass("show");
         $(".questionItem").eq(currentIndex).addClass("hide");
         //increament current index
         currentIndex--;
         //show the next element with new current index
-        $(".questionItem").eq(currentIndex).addClass("visible");
+        $(".questionItem").eq(currentIndex).addClass("show");
         $(".questionItem").eq(currentIndex).removeClass("hide");
-        if (currentIndex == 0) {
-            //disable next
-            $(".previous").prop("disabled", true);
-        }
-        if (currentIndex > 0) {
-            $(".next").prop("disabled", false);
-        }
+        initializeIndex();
     }
 }

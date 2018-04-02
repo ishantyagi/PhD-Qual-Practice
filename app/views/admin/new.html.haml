@@ -1,0 +1,33 @@
+.container.createquestion
+  %h2 Create New Question
+  %hr/
+  .row
+    .col-md-10
+      = form_tag admin_index_path do
+        .form-group
+          = label :question_bank, :category, 'Question Category'
+          = text_field :question_bank, 'category'
+        .form-group
+          = label :question_bank, :question, 'Question'
+          = text_field :question_bank, 'question'
+        .form-group
+          = label :question_bank, :option1, 'Option1'
+          = text_field :question_bank, 'option1'
+        .form-group
+        = label :question_bank, :option2, 'Option2'
+        = text_field :question_bank, 'option2'
+        .form-group
+          = label :question_bank, :option3, 'Option3'
+          = text_field :question_bank, 'option3'
+        .form-group
+          = label :question_bank, :option4, 'Option4'
+          = text_field :question_bank, 'option4'
+        .form-group 
+          = label :question_bank, :option5, 'Option5'
+          = text_field :question_bank, 'option5'
+        .form-group
+          = label :question_bank, :answer, 'Correct Answer'
+          = text_field :question_bank, 'answer'
+        .row
+          .form-group.mx-auto
+            = submit_tag 'Save Changes'

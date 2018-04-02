@@ -2,9 +2,48 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title PhDQual
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title Flash Cards: Home
+    
+    / Latest compiled and minified CSS
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", :rel => "stylesheet"}/
+   
+    / jQuery library
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
+    / Popper JS
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"}
+    / Latest compiled JavaScript
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    
   %body
+    %nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+      %a.navbar-brand{:href => "#"} PhD Flash Cards
+      %button.navbar-toggler{"data-target" => ".dual-collapse2", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      .collapse.navbar-collapse.w-100.order-1.order-md-0.dual-collapse2
+        %ul.navbar-nav.mr-auto
+          %li.nav-item.active
+            %a.nav-link{:href => "#"}
+              Home
+              %span.sr-only (current)
+          %li.nav-item
+            %a.nav-link{:href => "#"} Quizes
+          %li.nav-item
+            %a.nav-link{:href => "#"} About
+      .navbar-collapse.collapse.w-100.order-3.dual-collapse2
+        %ul.navbar-nav.ml-auto
+          %li.nav-item
+            %a.nav-link{:href => "/login'"} Login
+          %li.nav-item
+            %a.nav-link{:href => "/register'"} Register
+    %br/
     = yield
+    %br/
+    %footer.footer.bg-dark
+      .container
+        %span.text-muted Created by Team RubyGeeks

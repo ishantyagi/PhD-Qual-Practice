@@ -10,3 +10,7 @@
 .show{
     display: block;
 }
+/*Create question*/
+.createquestion input:not([type=submit]), .createrecipe input:not([type=submit]) {
+    margin-top: 8px;
+}

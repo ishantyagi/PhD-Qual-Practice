@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :home
+  root :to => redirect('/home')
   resources :admin
-  root 'admin#index'
+
+  
 
   # get 'admin/index'
 
