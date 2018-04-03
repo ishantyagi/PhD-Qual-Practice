@@ -1,32 +1,32 @@
 .container.createquestion
-  %h2 Create New Question
+  %h2 Edit Question
   %hr/
   .row
     .col-md-10
-      = form_tag questions_path do
+      = form_tag question_path(@question), :method=> :put do
         .form-group
           = label :question, :category, 'Question Category'
           = text_field :question, 'category'
         .form-group
-          = label :question, :question, 'Question'
-          = text_field :question, 'question'
+          = label :question_bank, :question, 'Question'
+          = text_area :question, 'question', :rows=>'5'
         .form-group
-          = label :question, :option1, 'Option1'
+          = label :question_bank, :option1, 'Option1'
           = text_field :question, 'option1'
         .form-group
-        = label :question, :option2, 'Option2'
+        = label :question_bank, :option2, 'Option2'
         = text_field :question, 'option2'
         .form-group
-          = label :question, :option3, 'Option3'
+          = label :question_bank, :option3, 'Option3'
           = text_field :question, 'option3'
         .form-group
-          = label :question, :option4, 'Option4'
+          = label :question_bank, :option4, 'Option4'
           = text_field :question, 'option4'
         .form-group 
-          = label :question, :option5, 'Option5'
+          = label :question_bank, :option5, 'Option5'
           = text_field :question, 'option5'
         .form-group
-          = label :question, :answer, 'Correct Answer'
+          = label :question_bank, :answer, 'Correct Answer'
           = text_field :question, 'answer'
         .row
           .form-group.mx-auto

@@ -3,7 +3,9 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
   
   def show
-    @user = User.find(params[:id])
+   # @user = User.find(params[:id])
+   # if authenticated, redirected to questions index view
+   redirect_to questions_path
   end
   
   def index
