@@ -46,3 +46,14 @@ a {
 .createquestion input:not([type=submit]), .createrecipe input:not([type=submit]) {
     margin-top: 8px;
 }
+table.dataTable tbody td{
+    padding: 0px 10px !important;
+    text-align: center;
+}
+table.dataTable thead th{
+    text-align: center !important;
+}
+.truncate {
+    max-width: 250px;
+    text-align: left !important;
+  }

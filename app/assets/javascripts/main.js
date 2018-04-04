@@ -6,6 +6,9 @@ var lastIndex = 0;
 $(function () {
     //positionFooter();
     initializeIndex();
+    $("#students").DataTable({
+        // "pageLength":2
+    });
 });
 
 function initializeIndex() {
