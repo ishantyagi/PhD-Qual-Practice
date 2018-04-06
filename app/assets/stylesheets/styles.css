@@ -1,3 +1,35 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Muli", "Helvetica Neue", Helmet, Freesans, sans-serif;
+    font-weight: 300;
+    /*line-height: 1.25;*/
+    overflow-x: hidden;
+    box-sizing: border-box;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    -webkit-font-feature-settings: "liga", "dlig" 0;
+    font-feature-settings: "liga", "dlig" 0;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    /*background-color: transparent !important;*/
+}
+ ul,li{
+     list-style:none;
+ }
 .correct{
     border: 1px solid green;
 }
@@ -10,3 +42,18 @@
 .show{
     display: block;
 }
+/*Create question*/
+.createquestion input:not([type=submit]), .createrecipe input:not([type=submit]) {
+    margin-top: 8px;
+}
+table.dataTable tbody td{
+    padding: 0px 10px !important;
+    text-align: center;
+}
+table.dataTable thead th{
+    text-align: center !important;
+}
+.truncate {
+    max-width: 250px;
+    text-align: left !important;
+  }

@@ -1,0 +1,10 @@
+.container
+  - provide(:title, @user.name)
+  %title
+    = yield(:title)
+    | Ruby on Rails Tutorial Sample App
+  %p
+    %li= link_to "Add a Question", new_question_path, :class=>'btn btn-primary'
+    %li= link_to "Modify a Question",'#',:class=>'btn btn-warning'
+    %li= link_to "Delete a Question",'#',:class=>'btn btn-danger'
+   

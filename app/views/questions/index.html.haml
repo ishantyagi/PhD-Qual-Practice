@@ -1,0 +1,27 @@
+%script{:src => "https://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"}
+%link{:href => "https://cdn.datatables.net/1.10.15/css/jquery.dataTables.css", :rel => "stylesheet"}/
+%link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+.container
+    =link_to "Add new question", new_question_path,:class=>'btn btn-primary'
+    .table-responsive.--margintop16#studentsTB
+        %table{:id=>'students',:class=>'default table table-hover'}
+            %thead
+                %tr
+                    %th Id
+                    %th Title
+                    %th Category
+                    %th Edit
+                    %th Delete
+            %tbody
+                - @questions.each_with_index do |ques,index|
+                    %tr
+                        %td= ques.id
+                        %td.truncate= ques.question
+                        %td= ques.category
+                        %td
+                            =link_to edit_question_path(ques) do
+                                %i{:class=>'fa fa-edit'}
+                        %td
+                            =link_to question_path(ques),:method=>:delete do
+                                %i{:class=>'fa fa-trash'}
+   

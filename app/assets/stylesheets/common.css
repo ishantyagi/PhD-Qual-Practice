@@ -1,0 +1,68 @@
+.--padding32topbottom {
+    padding: 32px 0;
+}
+
+.--margintop16 {
+    margin-top: 16px;
+}
+.--margintop8{
+    margin-top:8px!important;
+}
+.--marginbottom8 {
+    margin-bottom: 8px !important;
+}
+
+
+.--marginbottom16 {
+    margin-bottom: 16px !important;
+}
+
+.h--serif {
+    font-family: Nexabook, Rockwell, Georgia, serif;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+.text--body {
+    color: #302e21 !important;
+}
+
+.no--lineheight {
+    line-height: 1;
+}
+
+.text-positive {
+    color: #d01b1b;
+}
+
+.l--max850 {
+    margin: 0 auto;
+    max-width: 850px;
+    width: 100%;
+}
+
+.box--tinted {
+    background-color: #f7f7f7;
+}
+
+.--padding32 {
+    padding: 32px !important;
+}
+
+.size--xs, h6 {
+    font-size: 19px;
+}
+
+.list-unstyled > * {
+    margin: 0;
+    padding: 0;
+}
+.text-thin{
+    font-weight:300;
+}
+.size-mini{
+    font-size:17px;
+}
+.size-lg{
+    font-size:38px;
+}

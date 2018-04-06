@@ -1,0 +1,33 @@
+.container.createquestion
+  %h2 Create New Question
+  %hr/
+  .row
+    .col-md-10
+      = form_tag questions_path do
+        .form-group
+          = label :question, :category, 'Question Category'
+          = text_field :question, 'category'
+        .form-group
+          = label :question, :question, 'Question'
+          = text_field :question, 'question'
+        .form-group
+          = label :question, :option1, 'Option1'
+          = text_field :question, 'option1'
+        .form-group
+        = label :question, :option2, 'Option2'
+        = text_field :question, 'option2'
+        .form-group
+          = label :question, :option3, 'Option3'
+          = text_field :question, 'option3'
+        .form-group
+          = label :question, :option4, 'Option4'
+          = text_field :question, 'option4'
+        .form-group 
+          = label :question, :option5, 'Option5'
+          = text_field :question, 'option5'
+        .form-group
+          = label :question, :answer, 'Correct Answer'
+          = text_field :question, 'answer'
+        .row
+          .form-group.mx-auto
+            = submit_tag 'Save Changes'

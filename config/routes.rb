@@ -1,7 +1,23 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
+  # get 'sessions/new'
+
+  resources :home
+  root :to => redirect('/home')
   resources :admin
-  root 'admin#index'
+
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+  
+  resources :users
+  get '/index', to: 'users#show'
+  
+  resources :questions
+
+  get 'new_question' => 'questions#new'
 
   # get 'admin/index'
 
