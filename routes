@@ -8,18 +8,13 @@
               PATCH  /home/:id(.:format)           home#update
               PUT    /home/:id(.:format)           home#update
               DELETE /home/:id(.:format)           home#destroy
+              
          root GET    /                             redirect(301, /home)
-  admin_index GET    /admin(.:format)              admin#index
-              POST   /admin(.:format)              admin#create
-    new_admin GET    /admin/new(.:format)          admin#new
-   edit_admin GET    /admin/:id/edit(.:format)     admin#edit
-        admin GET    /admin/:id(.:format)          admin#show
-              PATCH  /admin/:id(.:format)          admin#update
-              PUT    /admin/:id(.:format)          admin#update
-              DELETE /admin/:id(.:format)          admin#destroy
+         
         login GET    /login(.:format)              sessions#new
               POST   /login(.:format)              sessions#create
        logout DELETE /logout(.:format)             sessions#destroy
+       
         users GET    /users(.:format)              users#index
               POST   /users(.:format)              users#create
      new_user GET    /users/new(.:format)          users#new
@@ -29,6 +24,7 @@
               PUT    /users/:id(.:format)          users#update
               DELETE /users/:id(.:format)          users#destroy
         index GET    /index(.:format)              users#show
+        
     questions GET    /questions(.:format)          questions#index
               POST   /questions(.:format)          questions#create
  new_question GET    /questions/new(.:format)      questions#new

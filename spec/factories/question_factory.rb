@@ -1,6 +1,6 @@
 FactoryBot.define do
-  factory :question do
-    question 'Test Question'
+  factory :question_bank do
+    question 'Test'
     category 'catergory'
     option1 'opt 1'
     option2 'opt 2'
