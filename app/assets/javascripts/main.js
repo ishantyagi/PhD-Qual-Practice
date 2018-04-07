@@ -6,11 +6,13 @@ var lastIndex = 0;
 $(function () {
     //positionFooter();
     initializeIndex();
-    $("#students").DataTable({
-        // "pageLength":2
-    });
+    if(getPageName()=="questions")
+    $("#students").DataTable();
 });
 
+function getPageName () {
+            return location.pathname.split('/').slice(-1)[0].toLowerCase();
+        }
 function initializeIndex() {
     currentIndex = $(".questionItem:not(.hide)").index();
     lastIndex = $(".questionItem").length - 1;
