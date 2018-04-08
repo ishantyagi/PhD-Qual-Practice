@@ -1,5 +1,9 @@
 require 'rails_helper'
 
+RSpec.configure do |config|
+    config.include SessionsHelper
+end
+
 RSpec.describe UsersController, type: :controller do
 
   describe "show function" do
@@ -9,32 +13,39 @@ RSpec.describe UsersController, type: :controller do
     end
   end
   
-  #incomplete
   describe "Update User" do
     let!(:user1) { FactoryBot.create(:user, name: 'test1', email: 'test@testing.com', password: 'testing')}
-    it "updates the profile" do
-      put :update, {id: user1.id, :user => { 'name' => 'test2'}}
-      expect(flash[:notice]).to match(/Profile updated/)
-      expect(response).to redirect_to(user1.id)
-    end
-  end
-  
-  describe "User confirm " do
-    it "logged_in_user" do
-      logged_in = false
-      expect(flash[:notice]).to match(/Please log in/)
+    it " should not allow unless logged_in?" do
+      put :update, {id: user1.id, user: { 'name' => 'test2'}}
+      expect(flash[:danger]).to match(/Please log in/)
       expect(response).to redirect_to(login_url)
     end
+    
+    context 'logged_in session' do 
+      let!(:user1) { FactoryBot.create(:user, name: 'test1', email: 'test@testing.com', password: 'testing')}
+      it 'should allow updating the profile' do
+        log_in user1
+        put :update, {id: user1.id, user: { name: 'test2', email: 'test@testing.com', password: 'testing'}}
+        expect(flash[:success]).to match(/Profile updated/)
+        expect(response).to redirect_to(user1)
+      end
+      
+      it 'should render edit when update_attributes does not work' do
+        log_in user1
+        put :update, {id: user1.id, user: { name: 'test2'}}
+        expect(response).to render_template(:edit)
+      end
+    end
+    
   end
   
-  #incomplete
-  #describe "check correctness" do
-  #  let!(:user1) { FactoryBot.create(:user, name: 'test1', email: 'test@testing.com', password: 'testing')}
-  #  it "confirms correct user" do
-  #    get :edit, {id: user1.id}
-  #    # unless @user == current_user ??
-  #    expect(response).to redirect_to(root_url) 
-  #  end
-  #end
+  describe 'Edit function' do
+    let!(:user1) { FactoryBot.create(:user, name: 'test1', email: 'test@testing.com', password: 'testing')}
+    it 'allows modification to the user profile' do
+      log_in user1
+      get :edit, id: user1.id
+      expect(response).to have_http_status(:success)
+    end
+  end
   
 end

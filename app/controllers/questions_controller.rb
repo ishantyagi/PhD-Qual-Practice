@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
     
     def show
         @questions = QuestionBank.all
+        redirect_to questions_path
     end
     
     def index
@@ -25,7 +26,8 @@ class QuestionsController < ApplicationController
     end
     
     def edit
-    @question = QuestionBank.find params[:id]
+        @question = QuestionBank.find params[:id]
+        redirect_to questions_path(@question)
     end
     
     def update

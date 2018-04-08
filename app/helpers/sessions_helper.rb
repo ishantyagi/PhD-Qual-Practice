@@ -16,3 +16,7 @@ module SessionsHelper
         @current_user = nil
     end
 end
+
+#RSpec.configure do |config|
+#    config.include SessionsHelper
+#end
