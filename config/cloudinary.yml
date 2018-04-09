@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dl6w8y79u
+  api_key: '169784275499227'
+  api_secret: mIN3-2YGstWK3PqoxoAIalEPJHE
+  enhance_image_tag: true
+  static_image_support: true
+production:
+  cloud_name: dl6w8y79u
+  api_key: '169784275499227'
+  api_secret: mIN3-2YGstWK3PqoxoAIalEPJHE
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dl6w8y79u
+  api_key: '169784275499227'
+  api_secret: mIN3-2YGstWK3PqoxoAIalEPJHE
+  enhance_image_tag: true
+  static_image_support: false
