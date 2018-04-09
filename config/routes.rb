@@ -6,8 +6,17 @@ Rails.application.routes.draw do
 
   resources :home
   root :to => redirect('/home')
+  get '/practice', to: 'practice#index'
+  get '/quiz', to: 'quiz#index'
+  
   resources :admin
-
+  
+  resources :practice
+  get '/index', to: 'practice#index'
+  
+  resource :quiz
+  
+  resources :sessions
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'

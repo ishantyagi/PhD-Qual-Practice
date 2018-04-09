@@ -25,7 +25,7 @@ class QuestionsController < ApplicationController
     end
     
     def edit
-    @question = QuestionBank.find params[:id]
+        @question = QuestionBank.find params[:id]
     end
     
     def update
@@ -33,14 +33,14 @@ class QuestionsController < ApplicationController
         @question.update_attributes!(question_params)
         flash[:notice] = "#{@question.id} was successfully updated."
         redirect_to questions_path(@question)
-  end
+    end
     
     def destroy
         @question = QuestionBank.find(params[:id])
         @question.destroy
         flash[:notice] = "Question '#{@question.id}' deleted."
         redirect_to questions_path
-  end
+    end
     
     private
     

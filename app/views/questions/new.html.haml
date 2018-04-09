@@ -6,7 +6,7 @@
       = form_tag questions_path do
         .form-group
           = label :question, :category, 'Question Category'
-          = text_field :question, 'category'
+          = select :question, :category, ['Networks', 'Algorithms', 'Operating Systems', 'Software']
         .form-group
           = label :question, :question, 'Question'
           = text_field :question, 'question'
