@@ -6,13 +6,24 @@ var lastIndex = 0;
 $(function () {
     //positionFooter();
     initializeIndex();
-    if(getPageName()=="questions")
+    if(getPageName().indexOf("questions")> -1){
     $("#students").DataTable();
+    }
+    if(getPageName()=="new" || getPageName()=="edit"){
+        initializeCloudinary();
+    }
 });
 
+
 function getPageName () {
-            return location.pathname.split('/').slice(-1)[0].toLowerCase();
+     return location.pathname.split('/').slice(-1)[0].toLowerCase();
         }
+        
+function initializeCloudinary(){
+    if($.fn.cloudinary_fileupload !== undefined) {
+    $("input.cloudinary-fileupload[type=file]").cloudinary_fileupload();
+  }
+}
 function initializeIndex() {
     currentIndex = $(".questionItem:not(.hide)").index();
     lastIndex = $(".questionItem").length - 1;

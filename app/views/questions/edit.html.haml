@@ -5,29 +5,29 @@
     .col-md-10
       = form_tag question_path(@question), :method=> :put do
         .form-group
-          = label :question, :category, 'Question Category'
-          = text_field :question, 'category'
+          = label :question, :category, 'Question Category',class: "control-label"
+          = select :question,:category, ['Networks', 'Algorithms', 'Operating Systems', 'Software'],{}, class:"form-control"
         .form-group
-          = label :question_bank, :question, 'Question'
-          = text_area :question, 'question', :rows=>'5'
+          = label :question, :question, 'Question',class: "control-label"
+          = text_field :question, 'question', class:"form-control"
         .form-group
-          = label :question_bank, :option1, 'Option1'
-          = text_field :question, 'option1'
+          = label :question, :option1, 'Option1',class: "control-label"
+          = text_field :question, 'option1', class:"form-control"
         .form-group
-        = label :question_bank, :option2, 'Option2'
-        = text_field :question, 'option2'
+        = label :question, :option2, 'Option2',class: "control-label"
+        = text_field :question, 'option2', class:"form-control"
         .form-group
-          = label :question_bank, :option3, 'Option3'
-          = text_field :question, 'option3'
+          = label :question, :option3, 'Option3',class: "control-label"
+          = text_field :question, 'option3', class:"form-control"
         .form-group
-          = label :question_bank, :option4, 'Option4'
-          = text_field :question, 'option4'
+          = label :question, :option4, 'Option4',class: "control-label"
+          = text_field :question, 'option4', class:"form-control"
         .form-group 
-          = label :question_bank, :option5, 'Option5'
-          = text_field :question, 'option5'
+          = label :question, :option5, 'Option5',class: "control-label"
+          = text_field :question, 'option5', class:"form-control"
         .form-group
-          = label :question_bank, :answer, 'Correct Answer'
-          = text_field :question, 'answer'
+          = label :question, :answer, 'Correct Answer',class: "control-label"
+          = text_field :question, 'answer', class:"form-control"
         .row
           .form-group.mx-auto
-            = submit_tag 'Save Changes'
+            = submit_tag 'Save Changes',class: "btn btn-primary"

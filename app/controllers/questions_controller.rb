@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
     
     def create
         @question = QuestionBank.create!(question_params)
-        flash[:notice] = "Question was successfully added."
+        flash[:success] = "Question was successfully added."
         redirect_to questions_path
     end
     
@@ -31,14 +31,14 @@ class QuestionsController < ApplicationController
     def update
         @question = QuestionBank.find params[:id]
         @question.update_attributes!(question_params)
-        flash[:notice] = "#{@question.id} was successfully updated."
+        flash[:success] = "Question-#{@question.id} was successfully updated."
         redirect_to questions_path(@question)
     end
     
     def destroy
         @question = QuestionBank.find(params[:id])
         @question.destroy
-        flash[:notice] = "Question '#{@question.id}' deleted."
+        flash[:destroy] = "Question-'#{@question.id}' deleted."
         redirect_to questions_path
     end
     
