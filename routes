@@ -1,0 +1,36 @@
+       Prefix Verb   URI Pattern                   Controller#Action
+    users_new GET    /users/new(.:format)          users#new
+   home_index GET    /home(.:format)               home#index
+              POST   /home(.:format)               home#create
+     new_home GET    /home/new(.:format)           home#new
+    edit_home GET    /home/:id/edit(.:format)      home#edit
+         home GET    /home/:id(.:format)           home#show
+              PATCH  /home/:id(.:format)           home#update
+              PUT    /home/:id(.:format)           home#update
+              DELETE /home/:id(.:format)           home#destroy
+              
+         root GET    /                             redirect(301, /home)
+         
+        login GET    /login(.:format)              sessions#new
+              POST   /login(.:format)              sessions#create
+       logout DELETE /logout(.:format)             sessions#destroy
+       
+        users GET    /users(.:format)              users#index
+              POST   /users(.:format)              users#create
+     new_user GET    /users/new(.:format)          users#new
+    edit_user GET    /users/:id/edit(.:format)     users#edit
+         user GET    /users/:id(.:format)          users#show
+              PATCH  /users/:id(.:format)          users#update
+              PUT    /users/:id(.:format)          users#update
+              DELETE /users/:id(.:format)          users#destroy
+        index GET    /index(.:format)              users#show
+        
+    questions GET    /questions(.:format)          questions#index
+              POST   /questions(.:format)          questions#create
+ new_question GET    /questions/new(.:format)      questions#new
+edit_question GET    /questions/:id/edit(.:format) questions#edit
+     question GET    /questions/:id(.:format)      questions#show
+              PATCH  /questions/:id(.:format)      questions#update
+              PUT    /questions/:id(.:format)      questions#update
+              DELETE /questions/:id(.:format)      questions#destroy
+              GET    /new_question(.:format)       questions#new

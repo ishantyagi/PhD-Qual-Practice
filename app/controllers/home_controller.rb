@@ -11,11 +11,11 @@ class HomeController < ApplicationController
   #   @questions = QuestionBank.all
   # end
 
-  # def create
-  #   @question = QuestionBank.create!(question_params)
-  #   flash[:notice] = "Question was successfully added."
-  #   # redirect_to admin_path
-  # end
+  def create
+    @question = QuestionBank.create!(question_params)
+    flash[:notice] = "Question was successfully added."
+    redirect_to questions_path
+  end
 
   # def delete
   # end
