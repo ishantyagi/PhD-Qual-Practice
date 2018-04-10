@@ -29,3 +29,13 @@ question_banks.each do |question|
   QuestionBank.create(question)
 end
 
+users = [
+	{	:name => 'Satish', 
+		:email => 'admin1@cs.tamu.edu',
+		:password => 'foobar1',
+		:password_confirmation => 'foobar1'}
+]
+
+users.each do |user|
+  User.create(user)
+end
