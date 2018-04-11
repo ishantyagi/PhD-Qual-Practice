@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'NexaBook';
+    asset-url('fonts/NexaBook.otf') format('truetype');
+    font-weight: normal;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -5,9 +11,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body {
-    font-family: "Muli", "Helvetica Neue", Helmet, Freesans, sans-serif;
+    font-family: "NexaBook", "Helvetica Neue", Helmet, Freesans, sans-serif;
     font-weight: 300;
-    /*line-height: 1.25;*/
     overflow-x: hidden;
     box-sizing: border-box;
     min-height: 100%;
@@ -30,6 +35,18 @@ a {
  ul,li{
      list-style:none;
  }
+ strong, b {
+    font-weight: 600;
+}
+::placeholder {
+    opacity: 0.6 !important;
+}
+::selection {
+    color: #302e21;
+    background: rgba(57,191,0,0.25);
+    text-shadow: none;
+}
+
 .correct{
     border: 1px solid green;
 }
@@ -57,3 +74,14 @@ table.dataTable thead th{
     max-width: 250px;
     text-align: left !important;
   }
+  
+/*reseting classes*/
+.jumbotron{
+    padding:2rem 3rem;
+}
+.questionItem{
+    min-height:300px;
+}
+.questionItem h3{
+    margin-top: 8px;
+}

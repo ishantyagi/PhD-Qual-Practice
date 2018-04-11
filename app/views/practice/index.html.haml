@@ -4,6 +4,8 @@
     - @questions.each_with_index do |ques,index|
       .questionItem{:class=>"#{'hide' if index > 0}","data-answer" => "#{ques.answer}"}
         .row
+          %span.h--serif Category: #{ques.category}
+        .row
           %h3= ques.question
         .row
           .choices

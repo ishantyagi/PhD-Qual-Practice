@@ -16,8 +16,8 @@
    
     / Latest compiled JavaScript
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"}
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false
+    = javascript_include_tag 'application', 'data-turbolinks-track' => false
     = csrf_meta_tags
     
   %body
@@ -34,9 +34,7 @@
           %li.nav-item
             %a.nav-link{:href => "/practice"} Practice
           %li.nav-item
-            %a.nav-link{:href => "/quiz"} Quizes
-          %li.nav-item
-            %a.nav-link{:href => "#"} About
+            %a.nav-link{:href => "/quiz"} Quiz
       .navbar-collapse.collapse.w-100.order-3.dual-collapse2
         - if logged_in?
           %ul.navbar-nav.ml-auto
