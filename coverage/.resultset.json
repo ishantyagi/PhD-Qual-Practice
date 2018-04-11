@@ -1,72 +1,27 @@
 {
-  "Cucumber Features": {
-    "coverage": {
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/models/question_bank.rb": [
-        1,
-        null
-      ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/controllers/admin_controller.rb": [
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
-        1,
-        null
-      ]
-    },
-    "timestamp": 1522246923
-  },
   "RSpec": {
     "coverage": {
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/helpers/application_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/helpers/questions_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/practice_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/helpers/sessions_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/questions_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/quiz_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/sessions_helper.rb": [
         1,
         1,
         5,
@@ -90,15 +45,47 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/helpers/users_helper.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/controllers/home_controller.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/home_controller.rb": [
         1,
         1,
         1,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/practice_controller.rb": [
+        1,
         null,
         1,
         0,
@@ -109,33 +96,18 @@
         null,
         null,
         1,
-        1,
-        1,
-        1,
+        0,
         null,
-        null,
-        1,
-        null,
-        null,
-        1,
         null,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/controllers/questions_controller.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/questions_controller.rb": [
         1,
         null,
         1,
         null,
         1,
-        2,
+        1,
         null,
         null,
         1,
@@ -159,14 +131,14 @@
         null,
         1,
         1,
-        1,
         null,
         null,
+        null,
         1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
@@ -187,7 +159,15 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/controllers/sessions_controller.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/quiz_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -212,7 +192,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/controllers/users_controller.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -266,7 +246,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/models/user.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/models/user.rb": [
         1,
         null,
         10,
@@ -280,15 +260,14 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/606/PhD-Qual-Practice/app/models/question_bank.rb": [
+      "/home/ec2-user/environment/sw-engg/PhD-Qual-Practice/app/models/question_bank.rb": [
         1,
+        1,
+        0,
+        null,
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1522301764
-=======
-    "timestamp": 1523229538
->>>>>>> origin/rspec_iter2
+    "timestamp": 1523426993
   }
 }
