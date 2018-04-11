@@ -11,24 +11,16 @@ Given the following questions exist:
   | Question2  |   AA    |   BB    |    CC   |   DD    |   EE    |   DD   |     2    |
   | Question3  |   AA    |   BB    |    CC   |   DD    |   EE    |   CC   |     3    |
   | Question4  |   AA    |   BB    |    CC   |   DD    |   EE    |   EE   |     1    |
-
-
-#Background:
-#Given I am on the flash card site
-#Then I should use see “See Flash cards”
-#When I press “See Flash cards”
-#Then I should be on flash card page
-
-#Scenario: Open the randomized flash card deck
-#Given I am on flash card page
-#Then I should see category selected as “All”
-#And Then I should see “Randomized flash cards”
+And I am on the home page
 
 Scenario: Show next/previous flash card
-Given I am on the flash card page
+Then I should see "Welcome"
+When I follow "Start Practice"
 #And I should see “Randomized flash cards”
 Then I should see "Question1"
 When I press "Next"
 Then I should see "Question2"
-And I press "Previous"
-Then I should see "Question1"
+When I press "Next"
+Then I should see "Question3"
+#When I press "Previous"
+#Then I should see "Question2"
