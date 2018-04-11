@@ -1,0 +1,14 @@
+﻿@media screen and (min-width:1100px) {
+}
+
+/*For small devices*/
+@media (max-width: 767px) {
+   
+   .questionItem{
+    min-height:400px !important;
+} 
+}
+
+@media screen and (max-width: 600px) {
+   
+}
