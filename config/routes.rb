@@ -6,8 +6,11 @@ Rails.application.routes.draw do
 
   resources :home
   root :to => redirect('/home')
-  get '/practice', to: 'practice#index'
+  get '/selcat', to: 'selcat#index'
   get '/quiz', to: 'quiz#index'
+  
+  resources :selcat
+  get '/practice', to: 'practice#index'
   
   resources :admin
   

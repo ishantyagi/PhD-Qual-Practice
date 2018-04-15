@@ -5,11 +5,13 @@ class PracticeController < ApplicationController
     end
 
     def index
-        @questions = QuestionBank.all
+        # @questions = QuestionBank.all
+        @questions = QuestionBank.find(params[:category])
     end
 
     def show
-        @questions = QuestionBank.all
+        # @questions = QuestionBank.all
+        @questions = QuestionBank.find(params[:category])
     end
     
 end
