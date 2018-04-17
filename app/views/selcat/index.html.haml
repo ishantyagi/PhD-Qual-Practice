@@ -1,15 +1,12 @@
 .container.jumbotron
-  .text-center
-    %h1 Select a Category
+  %h1.row Select a Category
   .row
-    .mx-auto
-    
-    = form_tag questions_path, :method => :get do
-      Include:
+    = form_tag practice_path, :method => :get do
       - @all_categories.each do |category|
-        = category
-        = check_box_tag "categories[#{category}]"
-      // = submit_tag 'Refresh'
-    
-      = link_to "Start Practice", practice_path(:category => @category), class: "btn btn-lg btn-primary"
-      // = link_to "Start Practice", practice_path([2]), class: "btn btn-lg btn-primary"
+        .form-check
+          = check_box_tag "categories[#{category}]",1,false, class: "form-check-input"
+          %label.form-check-label #{category}
+      .row
+        .mx-auto
+          = submit_tag 'Start Practice', class: "btn btn-lg btn-primary --margintop16"
+  
