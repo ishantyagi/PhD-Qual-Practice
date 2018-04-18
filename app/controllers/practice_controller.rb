@@ -5,7 +5,7 @@ class PracticeController < ApplicationController
     end
 
     def index
-        @questions = QuestionBank.all
+        #@questions = QuestionBank.all
         if params[:categories].present?
             @questions = QuestionBank.where(category: params[:categories].keys)
         end
