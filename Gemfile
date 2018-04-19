@@ -7,8 +7,7 @@ gem 'rails', '4.2.6'
 # gem 'rails',          '5.1.4'
 gem 'bcrypt',         '3.1.11'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg', '~> 0.20'
 
 # Use haml
 gem 'haml'
@@ -44,7 +43,7 @@ gem 'cloudinary'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
@@ -52,6 +51,11 @@ group :development, :test do
   gem 'rspec-rails', '3.4.2'
   gem 'ZenTest', '4.11.0'
 end
+
+group :development do
+   gem 'sqlite3'
+end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -73,8 +77,11 @@ group :test do
   gem 'factory_bot_rails'
 end
 
-
 group :production do
-  gem 'pg', '0.21.0'
+  
   gem 'rails_12factor'
+end
+group :test, :production do
+    gem 'pg','~> 0.20'
+
 end
